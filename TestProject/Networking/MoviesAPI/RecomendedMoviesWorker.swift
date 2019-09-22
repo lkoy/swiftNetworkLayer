@@ -13,7 +13,7 @@ class RecomendedMoviesWorker: RequestWorker {
     private let networkDispatcher: Dispatcher
     var id: Int
     
-    init(id: Int, networkDispatcher: Dispatcher = NetworkDispatcherFactory(environment: Environment("Movies", host: "https://smart.coruna.es/eventos/rest/obtenerSeccionCategorias/es")).makeNetworkProvider()) {
+    init(id: Int, networkDispatcher: Dispatcher = NetworkDispatcherFactory(environment: Environment("Prod", host: "https://smart.coruna.es/eventos/rest")).makeNetworkProvider()) {
         self.networkDispatcher = networkDispatcher
         self.id = id
     }

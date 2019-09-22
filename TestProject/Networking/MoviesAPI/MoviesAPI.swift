@@ -18,7 +18,7 @@ extension MoviesApi: Request {
     public var path: String {
         switch self {
         case .recommended(let id):
-            return ""
+            return "/obtenerSeccionCategorias/es"
         case .popular:
             return "popular"
         }
